@@ -1,0 +1,252 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSX functions</title>
+    <style>
+        td{
+            border: 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table style="width: 100%; border-collapse:collapse;">
+        <tr><th>Имя функции</th><th>Аргументы</th><th>Описание</th></tr>
+        <tr>
+            <td>AddSelect</td>
+            <td>flag, "str"</td>
+            <td>Добавляет пункт выбора для диалога</td>
+        </tr>
+        <tr>
+            <td>BlackOut</td>
+            <td>fHide, wait</td>
+            <td>Исчезновение в темноту</td>
+        </tr>
+        <tr>
+            <td>BustupClear</td>
+            <td>id</td>
+            <td>Скрывает спрайт с указанным id. Если аргументов нет, то все спрайты.</td>
+        </tr>
+        <tr>
+            <td>BustupLeave</td>
+            <td>accel, time, fFade, my, mx, id</td>
+            <td>Скрывает спрайт с указанным id в направлении mx my за всемя time с ускорением accel</td>
+        </tr>
+        <tr>
+            <td>BustupMove</td>
+            <td>pos, id</td>
+            <td>Перемещает спрайт id в позицию pos</td>
+        </tr>
+        <tr>
+            <td>setCgInfo</td>
+            <td>"buFile", "cgFile", flag, info</td>
+            <td>Устанавливает псевдоним для фонов. Эти псевдонимы потом используются в SetCg</td>
+        </tr>
+        <tr>
+            <td>ChkFlagOn</td>
+            <td>i</td>
+            <td>Проверяет установленность флага i. После стоит число для смещени</td>
+        </tr>
+        <tr>
+            <td>ChkSelect</td>
+            <td>i</td>
+            <td>Метка при выборе в диалоге. После стоит число для смещения</td>
+        </tr>
+        <tr>
+            <td>Down</td>
+            <td>accel, time, mv, id</td>
+            <td>Смещение спрайта id по вертикали за время time</td>
+        </tr>
+        <tr>
+            <td>EyeCatchEnter</td>
+            <td>fSoundKeep, type</td>
+            <td>Горизонтальные чёрные полосы сверху и снизу экрана для смены главы</td>
+        </tr>
+        <tr>
+            <td>Flush</td>
+            <td>"cgFile", time, color</td>
+            <td>Вспышка цвета</td>
+        </tr>
+        <tr>
+            <td>Font</td>
+            <td>"face", size</td>
+            <td>Меняет размер и гарнитуру шрифта для сообщений</td>
+        </tr>
+        <tr>
+            <td>Hide</td>
+            <td>fWait</td>
+            <td>Скрывает окно сообщений.</td>
+        </tr>
+        <tr>
+            <td>Hitret</td>
+            <td>num</td>
+            <td>Ждёт клика игрока.</td>
+        </tr>
+        <tr>
+            <td>IsGameClear</td>
+            <td></td>
+            <td>Проверяет, установлен ли флаг пройденности. Далее указано, сколько байт пропустить, если флаг не установлен</td>
+        </tr>
+        <tr>
+            <td>Jump</td>
+            <td>mv, id</td>
+            <td>Вертикальная встряска спрайта id</td>
+        </tr>
+        <tr>
+            <td>Mess</td>
+            <td>"str"</td>
+            <td>Выводит строку сообщения к имеющимся.</td>
+        </tr>
+        <tr>
+            <td>OnFlag</td>
+            <td>i</td>
+            <td>Устанавливает флаг i</td>
+        </tr>
+        <tr>
+            <td>OnGameClear</td>
+            <td></td>
+            <td>Устанавливает глобальный флаг пройденности игры</td>
+        </tr>
+        <tr>
+            <td>Quake</td>
+            <td>time, count, fWhole, h, w</td>
+            <td>Дрожание камеры.</td>
+        </tr>
+        <tr>
+            <td>ScPauseBgm</td>
+            <td></td>
+            <td>Приостанавливает фоновую музыку</td>
+        </tr>
+        <tr>
+            <td>ScPlayBgm</td>
+            <td>fNonFade, "file"</td>
+            <td>Начинает играть фоновую музыку</td>
+        </tr>
+        <tr>
+            <td>ScPlayEnvSe</td>
+            <td>fFade, "file"</td>
+            <td>Начинает играть зацикленный звуковой эффект</td>
+        </tr>
+        <tr>
+            <td>ScPlayMovie</td>
+            <td>"file"</td>
+            <td>Играет видеоролик</td>
+        </tr>
+        <tr>
+            <td>ScPlaySe</td>
+            <td>fWait, "file"</td>
+            <td>Проигрывает звуковой эффект единожды.</td>
+        </tr>
+        <tr>
+            <td>ScPlayVoice</td>
+            <td>"file"</td>
+            <td>Проигрывает голос</td>
+        </tr>
+        <tr>
+            <td>ScRestartBgm</td>
+            <td></td>
+            <td>Перезапускает фоновую музыку</td>
+        </tr>
+        <tr>
+            <td>ScStopBgm</td>
+            <td>fNonFade</td>
+            <td>Останавливает фоновую музыку</td>
+        </tr>
+        <tr>
+            <td>ScStopEnvSe</td>
+            <td>fFade, "file"</td>
+            <td>Останавливает звуковой эффект</td>
+        </tr>
+        <tr>
+            <td>ScStopSe</td>
+            <td></td>
+            <td>Останавливает звуковой эффект</td>
+        </tr>
+        <tr>
+            <td>ScWait</td>
+            <td>fKeyDisable, time</td>
+            <td>Пауза в игре</td>
+        </tr>
+        <tr>
+            <td>ScWaitVoice</td>
+            <td></td>
+            <td>Ждёт, пока не закончится проигрывание голоса</td>
+        </tr>
+        <tr>
+            <td>Scroll</td>
+            <td>fWait, accel, time, y, x</td>
+            <td>Прокручивает фон сцены в позицию x y за время time</td>
+        </tr>
+        <tr>
+            <td>SetBustup</td>
+            <td>priority, pos, "str"</td>
+            <td>Выводит спрайт str в позиции pos c priority по z</td>
+        </tr>
+        <tr>
+            <td>SetCg</td>
+            <td>"file", y, x</td>
+            <td>Задаёт фоновое изображение file со смещением x y</td>
+        </tr>
+        <tr>
+            <td>SetCgRGB</td>
+            <td>r, g, b</td>
+            <td>Задаёт цвет фона вместо изображения</td>
+        </tr>
+        <tr>
+            <td>Shake</td>
+            <td>count, mh, id</td>
+            <td>Горизонтальная тряска спрайта id</td>
+        </tr>
+        <tr>
+            <td>StartSelect</td>
+            <td></td>
+            <td>Выводит диалог для выбора</td>
+        </tr>
+        <tr>
+            <td>Talk</td>
+            <td>"voice","name"</td>
+            <td>Начинает диалог от имени name c озвучкой voice</td>
+        </tr>
+        <tr>
+            <td>Tone</td>
+            <td>type</td>
+            <td>Эффект. MONOCHROME, NEGATIVE и т.д.</td>
+        </tr>
+        <tr>
+            <td>Transition</td>
+            <td>time, "file"</td>
+            <td>Переход сцены за время time с эффектом file</td>
+        </tr>
+        <tr>
+            <td>Update</td>
+            <td>fFlush</td>
+            <td>Перерисовывает экран</td>
+        </tr>
+        <tr>
+            <td>WaitScroll</td>
+            <td></td>
+            <td>Ждёт, пока закончится функция Scroll</td>
+        </tr>
+        <tr>
+            <td>WhiteOut</td>
+            <td>fHide, wait</td>
+            <td>Исчезновение в белизну</td>
+        </tr>
+        <tr>
+            <td>WindowView</td>
+            <td>on</td>
+            <td>Переключает режим(цвет) окна сообщений</td>
+        </tr>
+        <tr>
+            <td>Zoom</td>
+            <td>fWait, accel, time, h, w, y, x</td>
+            <td>Трансформация фона в точку x y с размерами области w h за время time</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
